@@ -1,0 +1,75 @@
+#games{
+    background-image: url(https://cdna.artstation.com/p/assets/images/images/026/878/440/large/dmitry-slivin-.jpg?1589980281);
+}
+#games-cards{
+    background: rgb(223,232,235);
+    background: linear-gradient(90deg, rgba(223,232,235,1) 0%, rgba(111,109,109,1) 0%, rgba(146,157,156,0.36458333333333337) 0%, rgba(113,113,113,0.5298494397759104) 100%, rgba(0,0,0,0.3225665266106442) 100%, rgba(144,30,30,1) 100%, rgba(255,255,255,1) 100%);
+
+    box-shadow: rgba(250, 250, 250, 0.25) 0px 54px 55px, rgba(255, 255, 255, 0.12) 0px -12px 30px, rgba(255, 254, 254, 0.12) 0px 4px 6px, rgba(252, 252, 252, 0.17) 0px 12px 13px, rgba(255, 250, 250, 0.09) 0px -3px 5px;
+}
+
+.games-name{
+    color: white;
+}
+
+#side-bar{
+    margin-top: 30px;
+    background: rgb(223,232,235);
+    background: linear-gradient(90deg, rgba(223,232,235,1) 0%, rgba(111,109,109,1) 0%, rgba(146,157,156,0.36458333333333337) 0%, rgba(113,113,113,0.5298494397759104) 100%, rgba(0,0,0,0.3225665266106442) 100%, rgba(144,30,30,1) 100%, rgba(255,255,255,1) 100%);
+    color: white;
+}
+#pagination{
+    color: white !important;
+}
+.library{
+    /* background: rgb(223,232,235);
+    background: linear-gradient(90deg, rgba(223,232,235,1) 0%, rgba(111,109,109,1) 0%, rgba(146,157,156,0.36458333333333337) 0%, rgba(113,113,113,0.5298494397759104) 100%, rgba(0,0,0,0.3225665266106442) 100%, rgba(144,30,30,1) 100%, rgba(255,255,255,1) 100%); */
+}
+
+.add-block{
+background-color: white;
+}
+
+/* .product-list{
+    display: flex;
+    justify-content: space-around;
+} */
+.pagination{
+    background: linear-gradient(90deg, rgba(223,232,235,1) 0%, rgba(111,109,109,1) 0%, rgba(146,157,156,0.36458333333333337) 0%, rgba(113,113,113,0.5298494397759104) 100%, rgba(0,0,0,0.3225665266106442) 100%, rgba(144,30,30,1) 100%, rgba(255,255,255,1) 100%);  
+    border-radius: 5px;
+display: flex;
+    justify-content: center;
+    align-items: center;  
+    height: 30px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+@media only screen and (max-width: 320px){
+    #productcard-img{
+        width: 100% !important;
+    }
+    #games-cards{
+        width: 220px !important;
+    }
+    .product-list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .library-cards{
+        width: 300px;
+    }
+    .library-cards img{
+        width: 310px;
+        height: 300px;
+    }
+}
+@media only screen and(max-width: 375px){
+    .library-cards img{
+        width: 400px;
+        height: 300px;
+    }
+    .library-cards{
+        width: 400px;
+    }
+}

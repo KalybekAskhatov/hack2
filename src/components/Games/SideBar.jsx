@@ -1,0 +1,124 @@
+
+import {
+    FormControl,
+    FormControlLabel,
+    FormLabel,
+    Grid,
+    InputAdornment,
+    Paper,
+    Radio,
+    RadioGroup,
+    TextField,
+  } from "@mui/material";
+
+  import React, { useEffect, useState } from "react";
+  import SearchIcon from "@mui/icons-material/Search";
+  import { useSearchParams } from "react-router-dom";
+  import { useProducts } from "../../context/GamesContext";
+  import '../Games/Games.css'
+  
+  const SideBar = () => {
+  
+    const { fetchByParams } = useProducts()
+  
+    const [searchParams, setSearchParams] = useSearchParams();
+  
+    const [search, setSearch] = useState(searchParams.get("q") || "");
+  
+    useEffect(() => {
+      setSearchParams({
+        q: search,
+      });
+    }, [search]);
+  
+    return (
+        <div >
+      <Grid item md={3}>
+        <Paper id="side-bar" elevation={5} sx={{ p: 2 }}>
+          <TextField sx={{color:"white"}}
+            fullWidth
+            id="input-with-icon-textfield"
+            label="Search..."
+            variant="outlined"
+            value={search}
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
+            InputProps={{
+              startAdornment: (
+                <InputAdornment position="start">
+                  <SearchIcon />
+                </InputAdornment>
+              ),
+            }}
+          />
+  
+          <Grid>
+            <FormControl>
+              <FormLabel>Type</FormLabel>
+              <RadioGroup onChange={(e) => fetchByParams("type", e.target.value)}>
+                <FormControlLabel value="all" control={<Radio />} label="all" />
+                <FormControlLabel
+                  value="Action"
+                  control={<Radio />}
+                  label="Action"
+                />
+                <FormControlLabel
+                  value="Shooter"
+                  control={<Radio />}
+                  label="Shooter"
+                />
+                <FormControlLabel
+                  value="Strategy"
+                  control={<Radio />}
+                  label="Strategy"
+                />
+                <FormControlLabel
+                  value="BR"
+                  control={<Radio />}
+                  label="BR"
+                />
+              </RadioGroup>
+            </FormControl>
+            <input
+              step={100}
+              min={1}
+              max={10000}
+              onChange={(e) => console.log(e.target.value)}
+              type="range"
+              name=""
+              id=""
+            />
+            <FormControl>
+              <FormLabel>Price</FormLabel>
+              <RadioGroup
+                onChange={(e) => fetchByParams("price_lte", e.target.value)}
+              >
+                <FormControlLabel value="all" control={<Radio />} label="all" />
+                <FormControlLabel
+                  value="20"
+                  control={<Radio />}
+                  label="Less than 20$"
+                />
+                <FormControlLabel
+                  value="50"
+                  control={<Radio />}
+                  label="Less than 50$"
+                />
+                <FormControlLabel
+                  value="100"
+                  control={<Radio />}
+                  label="Less than 100$"
+                />
+              </RadioGroup>
+            </FormControl>
+          </Grid>
+  
+        </Paper>
+      </Grid>
+      </div>
+    );
+  };
+  
+  export default SideBar;
+  

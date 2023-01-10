@@ -1,0 +1,75 @@
+#background-video {
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+#h2{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+
+#mini-navbar{
+    width: 80vw;
+    height: 35px;
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.block1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.homepage-cards{
+    display: flex;
+
+
+}
+.sales{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+}
+.card-div{
+    background: rgb(171,180,182);
+background: linear-gradient(90deg, rgba(171,180,182,0.44861694677871145) 100%, rgba(92,92,92,0.4738270308123249) 100%, rgba(2,0,36,1) 100%);
+    border-radius: 10px;
+    width: 90vw;
+    margin-top: 30px;
+    height: 650px;
+}
+.home-cards{
+    width: 200px;
+}
+.carousel-cards{
+    width: 80vw;
+    height: 60vh;
+}
+@media only screen and (max-width: 320px ){
+    .homepage-cards{
+        /* display: flex;
+        flex-wrap: wrap;
+        height: 800px; */
+    }
+    .home-cards{
+        width: 300px;
+    }
+    .carousel-cards{
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+    .homepage-cards-title{
+        width: 100px;
+    }
+    
+}
